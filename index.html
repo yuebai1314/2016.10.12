@@ -1,1 +1,173 @@
-123
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>登录</title>
+        <script type="text/javascript">
+        window.onload=function(){
+        	var bodys=document.getElementsByTagName("body")[0];
+        	var mains=document.getElementById("main");
+        	var h = mains.offsetHeight;
+        	var w = mains.offsetWidth;
+        	mains.style.position = "absolute";
+        	mains.style.left ="50%";
+        	mains.style.top ="50%";
+        	mains.style.marginTop =-(h/2) + "px";
+        	mains.style.marginLeft =-(w/2) + "px";
+        	}
+
+        </script>
+        <script>
+     	function chk() {
+        // 判断用户名，是否为空
+        var inpuser = document.getElementsByName('zhanghao')[0];
+        if(inpuser.value == '' || inpuser.value == '账号') {
+            alert('请输入账号');
+            return false;
+        }
+        var inpuser = document.getElementsByName('mima')[0];
+        if(inpuser.value == '' || inpuser.value == '密码') {
+            alert('请输入密码');
+            return false;
+        }
+        var inpuser = document.getElementsByName('yanzheng')[0];
+        if(inpuser.value == '' || inpuser.value == '验证码') {
+            alert('请输入验证码');
+            return false;
+        }
+    }
+
+     	</script>
+      <style>
+        html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body
+{
+	background:url(../images/denglu_bg.jpg) no-repeat;
+	background-size: 100% ;
+}
+a,a:hover{color:#333;}
+#main{
+	width: 385px;
+	height: 375px;
+	background: #fff;
+	background-color: rgba(255,255,255,.2);
+	border-radius: 12px;
+	position: relative;
+	box-shadow: 0 0 50px #999;
+}
+h1{
+	background: url(../images/zhuomian_bg.png) no-repeat center bottom;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	height: 86px;
+	line-height: 100px;
+}
+form{
+	margin: 24px auto ;
+	width: 302px;
+}
+form p{
+	width: 242px;
+	height: 43px;
+	line-height: 43px;
+	margin-bottom: 5px;
+	color: #828282;
+	font-size: 14px;
+	padding-left: 60px;
+	background: url(../images/zhanghao.png) no-repeat  left #b8deea;
+}
+.mi{
+	background: url(../images/mima.png) no-repeat  left #b8deea;
+}
+.yan{
+	background: url(../images/yan.png) no-repeat  left #b8deea;
+}
+form input{
+	width: 230px;
+	color: #828282;
+	outline:none;
+	border:0px;
+	background: #b8deea;
+	margin-left: 5px;
+	height: 41px;
+	line-height: 43px;
+}
+.yan{
+	width: 77px;
+	float: left;
+}
+.yan img{
+	float: right;
+}
+.yan input{
+	width: 70px;
+}
+.heshi{
+	background: #69b1f1;
+	height: 43px;
+	width: 80px;
+	float: right;
+	color: #fff;
+	margin-left: 0;
+}
+.ti{
+	margin-top: 11px;
+	background: #3388d2;
+	color: #fff;
+	font-size: 18px;
+	width: 302px;
+	margin-left: 0px;
+	height: 43px;
+}
+.foot{
+	color: #fff;
+	font-size: 11px;
+	text-align: center;
+}
+        
+      </style>
+    </head>
+
+    <body>
+        <div id="main">
+        	<h1>桌面中心后台管理系统</h1>
+			<form method="GET" onsubmit="return chk()" >
+				<p class="zhang"><input type="text" name="zhanghao"  value="账号" onFocus="if(this.value=='账号')  this.value=''"></p>
+				<p class="mi"><input type="password" name="mima"  value="密码"  onFocus="if(this.value=='密码')  this.value=''" ></p>
+				<p class="yan">
+				<input type="text" name="yanzheng"  value="验证码" onFocus="if(this.value=='验证码')  this.value=''">
+				</p>
+				<input type="button" value="验证码核验" class="heshi">
+				<img src="images/suiji.jpg" alt="">
+				<input type="submit" name="tijiao" class="ti" value="立即登录">
+
+			</form>
+			<p class="foot">Copyright © 1993-2015 SRC</p>
+
+
+        </div>
+     
+        
+    </body>
+</html>
+
